@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - 초연결 솔루션 프로토타입</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="logo">CONNECT</h1>
+            <p class="tagline">Seamless Hyper-Connectivity</p>
+        </header>
+
+        <main class="mode-selection">
+            <div class="card-grid">
+                <button class="mode-card" id="mode-mirror">
+                    <div class="card-glow blue"></div>
+                    <div class="icon-box blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <h2>미러링 모드</h2>
+                    <p>스마트폰 화면 공유 및 터치패드 제어</p>
+                    <div class="status-badge">1번 모드</div>
+                </button>
+
+                <button class="mode-card" id="mode-expansion">
+                    <div class="card-glow purple"></div>
+                    <div class="icon-box purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M22 13h-4"></path><path d="M2 13h4"></path></svg>
+                    </div>
+                    <h2>확장 모드</h2>
+                    <p>시스템 디스플레이 확장 및 연속성 지원</p>
+                    <div class="status-badge">2번 모드</div>
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <button class="settings-btn" id="settings-trigger">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                설정
+            </button>
+        </footer>
+    </div>
+
+    <!-- Modal for Settings -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <header>
+                <h2>설정 (Settings)</h2>
+                <button class="close-btn">&times;</button>
+            </header>
+            <div class="settings-list">
+                <div class="setting-item">
+                    <span>자동 연결 활성화</span>
+                    <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                </div>
+                <div class="setting-item">
+                    <span>기기 별명</span>
+                    <input type="text" value="SuperPhone-X" class="input-field">
+                </div>
+                <div class="setting-item">
+                    <span>기본 실행 모드</span>
+                    <select class="select-field">
+                        <option>미러링 모드</option>
+                        <option>확장 모드</option>
+                        <option>항상 선택</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
